@@ -1,0 +1,80 @@
+.modal__content_add_crypto form h4 {
+  color: var(--secondary-base);
+  text-align: center;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.modal__content_add_crypto form div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.modal__content_add_crypto form div {
+  position: relative;
+}
+
+.modal__content_add_crypto form div input {
+  padding: 1rem;
+  padding-right: 4rem;
+  border: 1px solid var(--secondary-300);
+  outline: none;
+  color: var(--secondary-400);
+}
+
+.modal__content_add_crypto form div input::placeholder {
+  color: var(--secondary-400);
+}
+
+.modal__content_add_crypto form div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal__content_add_crypto form div input:focus {
+  border-color: var(--primary-500);
+}
+
+.modal__content_add_crypto form div .container_buttons_increment_decrement {
+  position: absolute;
+  right: 1.6rem;
+  top: 4px;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.modal__content_add_crypto form div .container_buttons_increment_decrement button {
+  font-size: 1.8rem;
+  border: none;
+  margin: -2px;
+  padding: 0;
+  line-height: 0;
+}
+
+.modal__content_add_crypto form div .container_buttons_increment_decrement button:hover {
+  filter: opacity(0.5)
+}
+
+.modal__content_add_crypto form footer button {
+  margin: 2.4rem 0 0;
+  width: 100%;
+  padding: 1.2rem 0.4rem;
+  color: var(--white);
+
+  transition: 0.2s;
+}
+
+.modal__content_add_crypto form footer button:hover {
+  filter: opacity(0.8)
+}
+
+.select_value_default {
+  color: red
+}

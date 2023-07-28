@@ -1,0 +1,183 @@
+.dashboard__infowallet {
+  display: flex;
+  max-width: 1680px;
+  padding: 0 7rem;
+  margin: 5.6rem auto;
+
+  gap: 3.2rem;
+}
+
+.dashboard__infowallet .currency {
+  width: 59.2rem;
+  height: 11.2rem;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: 8px;
+
+  gap: 1.6rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+
+  flex: 2;
+}
+
+.dashboard__infowallet .currency .currency_text {
+  width: 32rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  padding: 0 2rem;
+  gap: 1.6rem
+}
+
+
+.dashboard__infowallet .currency img {
+  display: flex;
+  align-items: center;
+  background: var(--primary-100);
+
+  width: 6.4rem;
+  padding: 1rem;
+
+  border-radius: 9999px;
+}
+
+.dashboard__infowallet .currency div h2 {
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+
+.dashboard__infowallet .currency div span {
+  color: var(--secondary-500);
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.dashboard__infowallet .currency .currency_balance {
+  height: 100%;
+  width: 28rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  background: var(--primary-100);
+  border-radius: 0 8px 8px 0;
+
+}
+
+.dashboard__infowallet .currency .currency_balance span {
+  color: var(--text-base);
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: bold;
+}
+
+
+
+.dashboard__infowallet .currency_variation {
+  width: 28rem;
+  height: 11.2rem;
+
+  display: flex;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+
+  flex: 1;
+}
+
+.dashboard__infowallet .currency_variation aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  height: 100%;
+  padding: 8px;
+}
+
+.dashboard__infowallet .currency_variation aside span {
+  color: var(--secondary-500);
+
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  white-space: nowrap
+
+}
+
+.dashboard__infowallet .currency_variation aside div {
+  display: flex;
+  align-items: center;
+  margin: 2.1rem 0 1rem;
+  gap: 8px;
+}
+
+.dashboard__infowallet .currency_variation aside div span {
+  color: var(--text-base);
+
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.dashboard__infowallet .currency_variation aside div img {
+  width: 2.4rem;
+}
+
+.dashboard__infowallet .graphic {
+  max-width: 200px;
+}
+
+
+
+.dashboard__infowallet .news {
+  width: 28rem;
+  height: 11.2rem;
+
+  display: flex;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text-base);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+
+  flex: 1;
+}
+
+.dashboard__infowallet .news div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 1.6rem;
+
+  min-width: 14rem;
+}
+
+.dashboard__infowallet .news div h4 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.dashboard__infowallet .news div span {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.dashboard__infowallet .news div a {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-top: 1.6rem;
+
+  color: var(--primary-500);
+}
+
+.dashboard__infowallet .news img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 8px 8px 0;
+  
+}

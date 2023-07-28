@@ -1,0 +1,43 @@
+.home__header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 0
+}
+
+.home__header nav {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home__header nav a {
+  display: inline-block;
+  color: var(--text-primary)
+}
+
+.home__auth {
+  display: flex;
+  gap: 0.4rem;
+  width: 20rem;
+}
+
+.home__auth button{
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  transition: 0.125s;
+}
+
+.home__auth button:hover{
+  filter: opacity(0.7)
+}
+
+.home__auth #home_btn_sign_in {
+  color: var(--text-default);
+  background: var(--white);
+}

@@ -1,0 +1,72 @@
+.home__footer_subsciption_section {
+  background: linear-gradient(138deg, #FBAB34 0%, #AD721A 100%);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12rem 0;
+}
+
+.home__footer_subsciption_section h4 {
+  color: var(--primary-200);
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+.home__footer_subsciption_section h2 {
+  color: var(--white);
+
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  letter-spacing: -0.4px; 
+}
+
+.home__footer_subsciption_section p {
+  color: var(--white);
+
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-top: 1rem;
+}
+
+.home__footer_subsciption_section label {
+  color: var(--white);
+
+
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+.home__footer_subsciption_section .home__foter_container_email_subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 32rem;
+}
+
+.home__footer_subsciption_section .home__foter_container_email_subscription input {
+  color: var(--text-base);
+  padding: 0.8rem 1.2rem;
+  line-height: 24px;
+  border: none;
+  outline: none;
+}
+
+.home__footer_subsciption_section .home__foter_container_email_subscription input:focus {
+  outline: 2px solid var(--primary-400)
+}
+
+.home__footer_subsciption_section .home__foter_container_email_subscription button {
+  margin-top: 1.2rem;
+  color: var(--white);
+  padding: 0.8rem 2.4rem;
+  line-height: 24px;
+}
+
+.home__footer_copyright_section {
+  padding: 3.2rem 11.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,55 @@
+.home__infocrypto_section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F7F7F7 100%);
+  padding-bottom: 13rem;
+}
+
+.home__infocrypto_container {
+  display: flex;
+  align-items: center;
+}
+
+/* media queria colocar flex quando o tamanho for mobile */
+.home__infocrypto_container_cardcrypto {
+  /* display: flex; */
+}
+
+.home__infocrypto_container_information {
+  margin-left: auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.4rem;
+}
+
+.home__infocrypto_container_information span {
+  color: var(--primary-500);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+.home__infocrypto_container_information h2 {
+  color: var(--text-base);
+
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  letter-spacing: -0.4px;
+}
+
+.home__infocrypto_container_information p {
+  color: var(--text-base);
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin: 1.6rem 0 4rem;
+}
+
+.home__infocrypto_container_information button {
+  color: var(--white);
+  display: flex;
+  width: 17.6rem;
+  height: 4.8re,;
+  padding: 1.4rem 2.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,14 @@
+.home__header_carousel {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 20rem;
+}
+
+.swiper-wrapper{
+  transition-timing-function: linear;
+}
+
+.home__header_carousel_content {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,50 @@
+.table_cryptos {
+  border-collapse: collapse
+}
+
+.table_cryptos thead tr th {
+  color: var(--secondary-500);
+
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-align: center;
+}
+
+.table_cryptos tbody tr td {
+  padding: 1.4rem 0.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.table_cryptos tbody tr td img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.table_cryptos tbody tr:nth-child(even)  {
+  background: var(--secondary-100);
+}
+
+.table_cryptos_name_crypto {
+  display: flex;
+  align-items: center;
+}
+
+.table_cryptos_name_crypto img {
+  margin-left: 12.4rem;
+}
+
+.table_cryptos_name_crypto span {
+  display: inline-block;
+  margin-left: 1.6rem;
+  margin-right: 4px;
+}
+
+.table_cryptos_name_crypto p {
+  color: var(--secondary-500)
+}
+
+.table_cryptos_price_crypto p {
+  margin-left: 6rem;
+}

@@ -1,0 +1,12 @@
+.dashboard__empty_wallet {
+  width: 24rem;
+  margin: 8rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard__empty_wallet img {
+  margin-bottom: 2.4rem;
+}

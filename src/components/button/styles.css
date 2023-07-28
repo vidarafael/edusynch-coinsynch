@@ -1,0 +1,6 @@
+.default__btn {
+  padding: 4px;
+  background: var(--primary-500);
+  border: none;
+  border-radius: 9999px;
+}
