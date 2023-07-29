@@ -12,3 +12,10 @@
   display: flex;
   gap: 1rem;
 }
+
+@media (min-width: 768px) and (max-width: 1240px) {
+  .home__header_carousel {
+    margin: 0 auto;
+    max-width: 55rem;
+  }
+}

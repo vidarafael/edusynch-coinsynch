@@ -73,6 +73,28 @@
   top: 60px;
 }
 
-.home__introduction_footer img:nth-child(3) {
-  /* top: 50px; */
+/* Tablets and Desktops */
+@media (min-width: 768px) and (max-width: 1240px) {
+
+  .home__introduction {
+    margin-top: 12rem;
+  }
+
+  .home__introduction__content h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .home__introduction__content h1 br {
+    display: none;
+  }
+
+  .home__introduction__content p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .home__introduction__content p br {
+    display: none;
+  }
 }

@@ -1,8 +1,9 @@
 .home__footer_subsciption_section {
   background: linear-gradient(138deg, #FBAB34 0%, #AD721A 100%);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 12rem 0;
+  gap: 1.6rem;
 }
 
 .home__footer_subsciption_section h4 {
@@ -69,4 +70,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1240px) { 
+  .home__footer_subsciption_section p br {
+    display: none;
+  }
+
+  .home__footer_subsciption_section .home__foter_container_email_subscription {
+    width: 100%;
+  }
 }

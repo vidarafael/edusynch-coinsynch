@@ -3,23 +3,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
+
 import './styles.css'
 
-export function MiniCarousel() {
+interface MiniCarouselProps {
+  slidesPerView?: number;
+  spaceBetween?: number;
+}
+
+export function MiniCarousel({ slidesPerView = 2, spaceBetween = 100 }: MiniCarouselProps) {
   const { cryptos } = useCoinCrypto()
 
   return (
     <Swiper
-      slidesPerView={2}
-      spaceBetween={100}
+      slidesPerView={slidesPerView}
+      spaceBetween={spaceBetween}
       loop={true}
       autoplay={{
-        delay: 0,
+        delay: 1,
+        disableOnInteraction: false,
       }}
       speed={10000}
-      pagination={{
-        clickable: true,
-      }}
       modules={[Autoplay]}
       className='home__header_carousel'
     >

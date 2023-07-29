@@ -18,10 +18,14 @@ export function InfosCrypto({ setOpenModalSignUp }: InfosCryptoProps) {
     <section className='home__infocrypto_section'>
       <div className='default__spacing home__infocrypto_container'>
         <div className='home__infocrypto_container_cardcrypto'>
-          <CardCrypto icon={bitcoin} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
-          <CardCrypto icon={circle} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
-          <CardCrypto icon={graphic} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
-          <CardCrypto icon={desktop} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
+          <div className='first_container_cardycrypto'>
+            <CardCrypto icon={bitcoin} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
+            <CardCrypto icon={circle} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
+          </div>
+          <div className='second_container_cardycrypto'>
+            <CardCrypto icon={graphic} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
+            <CardCrypto icon={desktop} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
+          </div>
         </div>
 
         <div className='home__infocrypto_container_information'>

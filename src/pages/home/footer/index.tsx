@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -6,9 +7,9 @@ import { Button } from "src/components/button";
 import { Input } from "src/components/input";
 import logo from 'src/assets/logo.svg'
 
-import './styles.css'
 import { api } from "src/services/axios";
-import { useState } from "react";
+
+import './styles.css'
 
 const schema = yup.object({
   email: yup.string().required(),
@@ -33,7 +34,7 @@ export function Footer() {
 
   return (
     <footer>
-      <section className="home__footer_subsciption_section">
+      <section className="home__footer_subsciption_section default__spacing">
         <div>
           <h4>Lorem ipsum</h4>
           <h2>Lorem ipsum</h2>
@@ -48,7 +49,7 @@ export function Footer() {
         </form>
       </section>
 
-      <section className="home__footer_copyright_section">
+      <section className="home__footer_copyright_section default__spacing">
         <span>Copyright © 2022 -  All rights reserved</span>
         <img src={logo} alt="logo icon" />
       </section>

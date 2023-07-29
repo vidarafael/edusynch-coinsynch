@@ -122,25 +122,26 @@ const fakeDataIfCoinMarketApiExpiredLimitOfRequests = [
 
 server.get('/cryptos-api', async (req, res) => {
   try {
-    const idsCryptos = []
-    const { data: responseCryptos } = await coinMarketAPI.get("/v1/cryptocurrency/listings/latest?limit=20")
+    // const idsCryptos = []
+    // const { data: responseCryptos } = await coinMarketAPI.get("/v1/cryptocurrency/listings/latest?limit=20")
 
-    responseCryptos.data.forEach((crypto) => {
-      idsCryptos.push(crypto.id)
-    })
+    // responseCryptos.data.forEach((crypto) => {
+    //   idsCryptos.push(crypto.id)
+    // })
 
-    const { data: responseCryptosInfos } = await coinMarketAPI.get(`/v2/cryptocurrency/info?id=${idsCryptos.join(',')}`)
+    // const { data: responseCryptosInfos } = await coinMarketAPI.get(`/v2/cryptocurrency/info?id=${idsCryptos.join(',')}`)
 
-    const formatResponseCryptos = responseCryptos.data.map((crypto) => {
-      const logoForCrypto = responseCryptosInfos.data?.[crypto.id]?.logo || ''
+    // const formatResponseCryptos = responseCryptos.data.map((crypto) => {
+    //   const logoForCrypto = responseCryptosInfos.data?.[crypto.id]?.logo || ''
 
-      return {
-        ...crypto,
-        logo: logoForCrypto
-      }
-    })
+    //   return {
+    //     ...crypto,
+    //     logo: logoForCrypto
+    //   }
+    // })
 
-    const response = [].length ? formatResponseCryptos : fakeDataIfCoinMarketApiExpiredLimitOfRequests
+    // const response = formatResponseCryptos
+    const response = fakeDataIfCoinMarketApiExpiredLimitOfRequests
     
     res.json(response)
   } catch (error) {

@@ -41,3 +41,33 @@
   color: var(--text-default);
   background: var(--white);
 }
+
+.home__header_carousel_container_tablet_device {
+  display: none;
+}
+
+/* Tablets and Desktops */
+@media (min-width: 768px) and (max-width: 1240px) {
+  .home__header nav {
+    width: 100%; 
+    justify-content: initial;
+    gap: 3.4rem;
+    font-size: 1.4rem;
+  }
+
+  .home__auth {
+    width: 30rem;
+  }
+
+  .home__header_carousel_container_desktop_device {
+    display: none;
+  }
+
+  .home__header_carousel_container_tablet_device {
+    display: block;
+    background: #FFF;
+    padding: 4px 8.4rem;
+    box-shadow: 0px 4px 8px 0px rgba(77, 77, 77, 0.10);
+    border-top: 1px solid var(--secondary-200);
+  }
+}

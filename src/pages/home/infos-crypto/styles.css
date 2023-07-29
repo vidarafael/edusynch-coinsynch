@@ -8,9 +8,20 @@
   align-items: center;
 }
 
-/* media queria colocar flex quando o tamanho for mobile */
 .home__infocrypto_container_cardcrypto {
-  /* display: flex; */
+  margin-right: 1rem;
+}
+
+.first_container_cardycrypto {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.second_container_cardycrypto {
+  display: flex;
+  gap: 3.2rem;
+  margin-top: 3.2rem;
+  margin-left: 10rem;
 }
 
 .home__infocrypto_container_information {
@@ -52,4 +63,40 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+/* Tablets and Desktops */
+@media (min-width: 768px) and (max-width: 1240px) {
+  .home__infocrypto_container {
+    flex-direction: column-reverse;
+  }
+
+  .home__infocrypto_container_information {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .home__infocrypto_container_information p {
+    text-align: justify
+  }
+
+  .home__infocrypto_container_information p br {
+    display: none;
+  }
+
+  .home__infocrypto_container_information button {
+    display: none;
+  }
+
+  .first_container_cardycrypto {
+    display: flex;
+    gap: 2.4rem;
+  }
+  
+  .second_container_cardycrypto {
+    display: flex;
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+    margin-left: 8rem;
+  }
 }
