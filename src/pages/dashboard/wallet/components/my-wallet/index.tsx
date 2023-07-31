@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 
 import wallet from 'src/assets/wallet.svg'
 
@@ -19,6 +19,8 @@ interface MyWalletProps {
 
 export function MyWallet({ setOpenModalAddCrypto, handleOpenModalTransferCrypto, myCryptos }: MyWalletProps) {
 
+  const [showMore, setShowMore] = useState(false)
+
   return (
     <div className="dashboard__mywallet">
       <div className="dashboard__mywallet_container">
@@ -33,6 +35,7 @@ export function MyWallet({ setOpenModalAddCrypto, handleOpenModalTransferCrypto,
           <button id="btn_add_crypto_mobile" onClick={() => setOpenModalAddCrypto(true)}>
             +
           </button>
+          {/*  */}
         </div>
         {myCryptos.length ? (
           <>
@@ -40,7 +43,10 @@ export function MyWallet({ setOpenModalAddCrypto, handleOpenModalTransferCrypto,
               cryptos={myCryptos}
               handleOpenModalTransferCrypto={handleOpenModalTransferCrypto}
             />
-            <CardsCrypto cryptos={myCryptos} handleOpenModalTransferCrypto={handleOpenModalTransferCrypto} />
+
+            {/* Show only mobile */}
+            <CardsCrypto cryptos={showMore ? myCryptos : myCryptos.slice(0, 4)} handleOpenModalTransferCrypto={handleOpenModalTransferCrypto} />
+            {!showMore && <button className="dashboard__btn_viewmore_mobile" onClick={() => setShowMore(true)}>View More +</button>}
           </>
         ) : <EmptyWallet/>}
       </div>

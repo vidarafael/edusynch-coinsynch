@@ -18,6 +18,8 @@
   .dashboard__header {
     padding: 2rem 4rem 2rem 4.8rem;
     z-index: 100;
+    box-shadow: 0px 4px 8px rgba(77, 77, 77, 0.10);
+    border-bottom: 1px solid rgba(77, 77, 77, 0.10)
   }
 
   .dashboard__header_tablet_btn_hamburguer {
@@ -30,6 +32,7 @@
     padding: 2rem 2rem 2rem 2.2rem;
     z-index: 100;
     box-shadow: 0px 4px 8px 0px rgba(77, 77, 77, 0.10);
+    border-bottom: 1px solid rgba(77, 77, 77, 0.10)
   }
 
   .dashboard__header_tablet_btn_hamburguer {

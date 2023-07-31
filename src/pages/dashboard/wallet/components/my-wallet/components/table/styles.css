@@ -53,10 +53,6 @@
   align-items: center;
 }
 
-.dashboard__table_cryptos_name_crypto img {
-  /* margin-left: 12.4rem; */
-}
-
 .dashboard__table_cryptos_name_crypto span {
   display: inline-block;
   margin-left: 1.6rem;

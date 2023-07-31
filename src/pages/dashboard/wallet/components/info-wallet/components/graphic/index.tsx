@@ -12,7 +12,7 @@ import {
 } from 'chart.js';
 import { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { useCoinCrypto } from 'src/contexts/CoinCrypto';
+import { ICrypto, useCoinCrypto } from 'src/contexts/CoinCrypto';
 
 ChartJS.register(
   CategoryScale,
@@ -43,33 +43,22 @@ export const options = {
 } as ChartOptions<'line'>;
 
 
-export function Graphic() {
-  const { cryptos } = useCoinCrypto()
+interface GraphicProps {
+  crypto: ICrypto
+}
 
-  const [index, setIndex] = useState(0)
+export function Graphic({ crypto }: GraphicProps) {
+  const differencePercentInValue = crypto?.quote?.USD?.percent_change_24h * crypto?.quote?.USD?.price
 
-  useEffect(() => {
-    // if(!cryptos.length) {
-    //   return
-    // }
-
-    // setInterval(() => {
-    //   if (index === cryptos.length - 1) {
-    //     return setIndex(0)
-    //   }
-  
-    //   setIndex((prevState) => prevState++)
-    // }, 5000)
-    
-  }, [cryptos])
-
+  // if percentage is negative, then subtract else sum
+  const result = crypto?.quote?.USD?.percent_change_24h < 0 ? crypto?.quote?.USD?.price - differencePercentInValue : crypto?.quote?.USD?.price + differencePercentInValue
 
   const data = {
     labels: ['', ''],
     datasets: [
       {
         label: "",
-        data: [cryptos[index]?.quote?.USD?.price || 0, cryptos[index]?.quote?.USD?.percent_change_24h || 0],
+        data: [result || 0, crypto?.quote?.USD?.price || 0],
         borderColor: "transparent",
         backgroundColor: "transparent",
         fill: {
@@ -80,7 +69,6 @@ export function Graphic() {
     ],
   };
 
- 
 
   return (
     <Line options={options} data={data} />

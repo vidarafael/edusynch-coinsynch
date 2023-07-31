@@ -122,26 +122,25 @@ const fakeDataIfCoinMarketApiExpiredLimitOfRequests = [
 
 server.get('/cryptos-api', async (req, res) => {
   try {
-    // const idsCryptos = []
-    // const { data: responseCryptos } = await coinMarketAPI.get("/v1/cryptocurrency/listings/latest?limit=20")
+    const idsCryptos = []
+    const { data: responseCryptos } = await coinMarketAPI.get("/v1/cryptocurrency/listings/latest?limit=20")
 
-    // responseCryptos.data.forEach((crypto) => {
-    //   idsCryptos.push(crypto.id)
-    // })
+    responseCryptos.data.forEach((crypto) => {
+      idsCryptos.push(crypto.id)
+    })
 
-    // const { data: responseCryptosInfos } = await coinMarketAPI.get(`/v2/cryptocurrency/info?id=${idsCryptos.join(',')}`)
+    const { data: responseCryptosInfos } = await coinMarketAPI.get(`/v2/cryptocurrency/info?id=${idsCryptos.join(',')}`)
 
-    // const formatResponseCryptos = responseCryptos.data.map((crypto) => {
-    //   const logoForCrypto = responseCryptosInfos.data?.[crypto.id]?.logo || ''
+    const formatResponseCryptos = responseCryptos.data.map((crypto) => {
+      const logoForCrypto = responseCryptosInfos.data?.[crypto.id]?.logo || ''
 
-    //   return {
-    //     ...crypto,
-    //     logo: logoForCrypto
-    //   }
-    // })
+      return {
+        ...crypto,
+        logo: logoForCrypto
+      }
+    })
 
-    // const response = formatResponseCryptos
-    const response = fakeDataIfCoinMarketApiExpiredLimitOfRequests
+    const response = formatResponseCryptos.length ? formatResponseCryptos : fakeDataIfCoinMarketApiExpiredLimitOfRequests
     
     res.json(response)
   } catch (error) {
@@ -268,15 +267,17 @@ server.post('/cryptos/transfer', async (req, res) => {
     const { coinId, quantity } = req.body
     const userId = req.headers.authorization
 
-    const { data } = await axios.get(`${url}/cryptos-js?coindId=${coinId}&userId=${userId}`)
+    const { data } = await axios.get(`${url}/cryptos-js?coinId=${coinId}&userId=${userId}`)
 
-    if (data[0]) {
-      const subtractQuantity = data[0].quantity - quantity
+    const cryptoCoin = data?.[0]
+
+    if (cryptoCoin) {
+      const subtractQuantity = cryptoCoin.quantity - quantity
 
       if (subtractQuantity <= 0) {
-        await axios.delete(`${url}/cryptos-js/${data[0].id}`)
+        await axios.delete(`${url}/cryptos-js/${cryptoCoin.id}`)
       } else {
-        await axios.patch(`${url}/cryptos-js/${data[0].id}`, { quantity: subtractQuantity })
+        await axios.patch(`${url}/cryptos-js/${cryptoCoin.id}`, { quantity: subtractQuantity })
       }
     }
 

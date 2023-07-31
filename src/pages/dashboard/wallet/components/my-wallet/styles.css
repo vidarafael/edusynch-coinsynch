@@ -3,7 +3,7 @@
 .dashboard__mywallet {
   width: 100%;
   padding: 0 7rem;
-  margin-bottom: 24.7rem;
+  margin-bottom: 30.7rem;
 }
 
 .dashboard__mywallet_container {
@@ -108,9 +108,14 @@
   justify-content: center;
 }
 
+.dashboard__btn_viewmore_mobile {
+  display: none;
+}
+
 @media (max-width: 767px) { 
   .dashboard__mywallet {
     padding: 0 2.4rem;
+    margin-bottom: 24.7rem;
   }
 
   .dashboard__mywallet_container {
@@ -130,5 +135,13 @@
 
   .dashboard__mywallet_header {
     border-bottom: none;
+  }
+
+  .dashboard__btn_viewmore_mobile {
+    display: block;
+    color: var(--primary-500);
+    margin: 4rem auto 0;
+    border: none;
+    background: transparent;
   }
 }

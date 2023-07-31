@@ -15,6 +15,7 @@ import { BsEye } from "react-icons/bs";
 import { api } from 'src/services/axios';
 
 import './styles.css'
+import { toast } from 'react-toastify';
 
 interface ModalSignUp {
   isOpen: boolean;
@@ -75,6 +76,7 @@ export function ModalSignUp({ isOpen, setIsOpen, setOpenModalSignIn }: ModalSign
   async function handleSignUp({ email, name, password }: { email: string; name: string; password: string }) {
     await api.post('/users/create', { email, name, password })
 
+    toast.success("User registred")
     handleSignIn()
   }
 
