@@ -1,8 +1,9 @@
 .dashboard__infowallet {
   display: flex;
   max-width: 1680px;
-  padding: 0 7rem;
+  padding: 0 6.4rem;
   margin: 5.6rem auto;
+  flex-wrap: wrap;
 
   gap: 3.2rem;
 }
@@ -18,11 +19,11 @@
   gap: 1.6rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
 
-  flex: 2;
+  flex: 1;
 }
 
 .dashboard__infowallet .currency .currency_text {
-  width: 32rem;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -56,14 +57,12 @@
 }
 
 .dashboard__infowallet .currency .currency_balance {
+  width: 100%;
   height: 100%;
-  width: 28rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  flex: 1;
 
   background: var(--primary-100);
   border-radius: 0 8px 8px 0;
@@ -87,8 +86,6 @@
   border-radius: 8px;
   background: var(--white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
-
-  flex: 1;
 }
 
 .dashboard__infowallet .currency_variation aside {
@@ -129,7 +126,12 @@
 }
 
 .dashboard__infowallet .graphic {
-  max-width: 200px;
+  flex: 1;
+}
+
+.dashboard__infowallet .graphic canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 
@@ -143,8 +145,6 @@
   background: var(--white);
   color: var(--text-base);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
-
-  flex: 1;
 }
 
 .dashboard__infowallet .news div {
@@ -178,6 +178,123 @@
 .dashboard__infowallet .news img {
   height: 100%;
   width: 100%;
+  max-width: 15rem;
+  margin-left: auto;
   border-radius: 0 8px 8px 0;
-  
+}
+
+.dashboard__infowallet .currency .currency_text div h2 b {
+  font-weight: 400;
+}
+
+.dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile, 
+.dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile div,
+.dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile p {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1320px) {
+  .dashboard__infowallet .currency {
+    width: 100%;
+    flex: none;
+  }
+
+  .dashboard__infowallet .currency_variation {
+    flex: 1
+  }
+
+  .dashboard__infowallet .news {
+    flex: 1
+  }
+}
+
+
+@media (max-width: 767px) {
+  .dashboard__infowallet {
+    padding: 0 2.4rem;
+    margin: 2rem 0;
+  }
+
+  .dashboard__infowallet .currency {
+    width: 100%;
+    flex: none;
+    height: 6.4rem;
+  }
+
+  .dashboard__infowallet .currency .currency_text {
+    padding: 0 1rem;
+  }
+
+  .dashboard__infowallet .currency .currency_text img {
+    width: 4.4rem;
+  }
+
+  .dashboard__infowallet .currency .currency_text div h2 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .dashboard__infowallet .currency .currency_text div h2 b {
+    display: block;
+    color: var(--secondary-500);
+    font-size: 1.2rem
+  }
+
+  .dashboard__infowallet .currency .currency_text div span {
+    display: none;
+  }
+
+  .dashboard__infowallet .currency .currency_balance span {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .dashboard__infowallet .currency_variation {
+    flex-direction: column;
+    height: initial;
+    flex: 1;
+  }
+
+  .dashboard__infowallet .currency_variation aside {
+    justify-content: flex-start;
+    
+  }
+
+  .dashboard__infowallet .currency_variation aside div {
+    display: none;
+  }
+
+  .dashboard__infowallet .currency_variation aside p {
+    display: none;
+  }
+
+  .dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile, 
+  .dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile div,
+  .dashboard__infowallet .currency_variation aside .currency_variation_info_crypto_mobile p {
+    display: flex;
+    align-items: center;
+    margin: 8px 0 0;
+  }
+
+  .dashboard__infowallet .news {
+    flex-direction: column;
+    height: initial;
+    flex: 1;
+  }
+
+  .dashboard__infowallet .news div {
+    min-width: auto;
+    padding: 8px;
+  }
+
+  .dashboard__infowallet .news img {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 8px 8px;
+    max-height: 15rem;
+    margin-top: auto;
+  }
+
 }

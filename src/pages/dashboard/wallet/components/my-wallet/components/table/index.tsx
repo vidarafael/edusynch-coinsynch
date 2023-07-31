@@ -17,8 +17,8 @@ export function Table({ cryptos, handleOpenModalTransferCrypto }: TableProps) {
       <thead>
         <tr>
           <th>#</th>
-          <th style={{ width: '300px' }}>Crypto</th>
-          <th style={{ width: '300px' }}>Holdings</th>
+          <th>Crypto</th>
+          <th>Holdings</th>
           <th>Change</th>
           <th>Trade</th>
         </tr>
@@ -32,22 +32,22 @@ export function Table({ cryptos, handleOpenModalTransferCrypto }: TableProps) {
           return (
             <tr key={index}>
               <td>{coinCrypto.cmc_rank}</td>
-              <td className="table_cryptos_name_crypto">
+              <td className="dashboard__table_cryptos_name_crypto">
                 <img src={coinCrypto.logo} alt="image crypto coin" />
                 <span>{coinCrypto.name}</span>
                 <p>{coinCrypto.symbol}</p>
               </td>
-              <td className="table_cryptos_holdings_crypto">
+              <td className="dashboard__table_cryptos_holdings_crypto">
                 <p>{formatPrice}</p>
                 <span>{coinCrypto.quantity} {coinCrypto.symbol}</span>
               </td>
               <td><p className={`${isPositive ? 'positive_color' : 'negative_color' }`}>{isPositive && '+'}{coinCrypto?.percent_change_24h?.toFixed(3)}%</p></td>
               <td>
                 <Button 
-                    text={<img src={trade} alt="trade icon" />}
-                    className="dashboard__btn_trade_crypto"
-                    onClick={() => { handleOpenModalTransferCrypto(coinCrypto) }} 
-                  /> 
+                  text={<img src={trade} alt="trade icon" />}
+                  className="dashboard__btn_trade_crypto"
+                  onClick={() => { handleOpenModalTransferCrypto(coinCrypto) }} 
+                /> 
               </td>
             </tr>
           )

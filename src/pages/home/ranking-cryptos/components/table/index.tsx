@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { ICrypto } from "src/contexts/CoinCrypto";
 
-import { Button } from "../button";
+import { Button } from "../../../../../components/button";
 import trade from 'src/assets/dashboard/icons/trade.svg'
 
 import './styles.css'

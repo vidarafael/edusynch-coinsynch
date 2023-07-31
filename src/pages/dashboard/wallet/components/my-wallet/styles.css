@@ -6,7 +6,7 @@
   margin-bottom: 24.7rem;
 }
 
-.dashboard_mywallet_container {
+.dashboard__mywallet_container {
   width: 100%;
   background: white;
   border-radius: 8px;
@@ -44,7 +44,7 @@
   filter: opacity(0.8)
 }
 
-.dashboard_mywallet_container table {
+.dashboard__mywallet_container table {
   margin-top: 2.4rem;
   width: 100%;
 }
@@ -93,4 +93,42 @@
 
 .dashboard__btn_trade_crypto img {
   width: 1.6rem !important;
+}
+
+#btn_add_crypto_mobile {
+  display: none;
+  background: var(--primary-500);
+  border: none;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) { 
+  .dashboard__mywallet {
+    padding: 0 2.4rem;
+  }
+
+  .dashboard__mywallet_container {
+    background: transparent;
+    box-shadow: none;
+    border-top: 1px solid var(--secondary-300);
+    border-radius: 0px;
+  }
+
+  #btn_add_crypto {
+    display: none;
+  }
+
+  #btn_add_crypto_mobile {
+    display: flex;
+  }
+
+  .dashboard__mywallet_header {
+    border-bottom: none;
+  }
 }

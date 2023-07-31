@@ -1,56 +1,88 @@
-import Chart from 'react-apexcharts'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend,
+  ChartOptions,
+} from 'chart.js';
+import { useEffect, useState } from 'react';
+import { Line } from 'react-chartjs-2';
+import { useCoinCrypto } from 'src/contexts/CoinCrypto';
 
-const options = {
-  chart: {
-    toolbar: {
-      show: false,
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend
+);
+
+export const options = {
+  scales: {
+    x: {
+      display: false,
+      ticks: {
+        display: false
+      }
     },
-    zoom: {
-      enabled: false,
-    },
-    foreColor: 'transparent',
-    width: '100%',
-    height: '100%',
-  },
-  grid: {
-    show: false,
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  tooltip: {
-    enabled: false,
-  },
-  xaxis: {
-    // type: 'datetime',
-    axisBorder: {
-      show: false
-    },
-    axisTicks: {
-      show: false,
-    },
-    // categories: [
-     
-    // ],
-  },
-  colors: ['transparent'],
-  fill: {
-    type: 'gradient',
-    colors: ['#FBAB34'],
-    gradient: {
-      shade: 'transparent',
-      opacityFrom: 1,
-      opacityTo: 0.5,
+    y: {
+      display: true,
+      ticks: {
+        display: false
+      }
     }
-  },
-} as ApexCharts.ApexOptions;
+  }
+} as ChartOptions<'line'>;
 
-const series = [
-  { name: 'series1', data: [150, 180, 10, 120] }
-]
 
 export function Graphic() {
+  const { cryptos } = useCoinCrypto()
+
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    // if(!cryptos.length) {
+    //   return
+    // }
+
+    // setInterval(() => {
+    //   if (index === cryptos.length - 1) {
+    //     return setIndex(0)
+    //   }
+  
+    //   setIndex((prevState) => prevState++)
+    // }, 5000)
+    
+  }, [cryptos])
+
+
+  const data = {
+    labels: ['', ''],
+    datasets: [
+      {
+        label: "",
+        data: [cryptos[index]?.quote?.USD?.price || 0, cryptos[index]?.quote?.USD?.percent_change_24h || 0],
+        borderColor: "transparent",
+        backgroundColor: "transparent",
+        fill: {
+          target: "origin", // Set the fill options
+          above: "rgba(251, 171, 52, 0.5)"
+        }
+      },
+    ],
+  };
+
+ 
+
   return (
-    <Chart options={options} series={series} type="area"  />
+    <Line options={options} data={data} />
   )
 }

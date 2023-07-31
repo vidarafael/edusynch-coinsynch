@@ -8,6 +8,7 @@ interface InfoWalletProps {
   totalBalance: number;
 }
 
+
 export function InfoWallet({ totalBalance }: InfoWalletProps) {
   const formatTotalBalance = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD' }).format(totalBalance)
 
@@ -18,7 +19,7 @@ export function InfoWallet({ totalBalance }: InfoWalletProps) {
           <img src={balance} alt="balance" />
 
           <div>
-            <h2>Balance in US$</h2>
+            <h2>Balance <b>in US$</b></h2>
             <span>(approximately)</span>
           </div>
         </div>
@@ -36,6 +37,14 @@ export function InfoWallet({ totalBalance }: InfoWalletProps) {
             <span>ETH</span>
           </div>
           <p className='positive_color'>+5.23%</p>
+
+          <div className='currency_variation_info_crypto_mobile'>
+            <div>
+              <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="image crypto coin" />
+              <span>ETH</span>
+            </div>
+            <p className='positive_color'>+5.23%</p>
+          </div>
         </aside>
 
         <div className='graphic'>

@@ -7,6 +7,7 @@ import { EmptyWallet } from "./components/empty-wallet"
 
 import { IMyCrypto } from "../.."
 import { Table } from "./components/table"
+import { CardsCrypto } from "./components/cards-crypto"
 
 import './styles.css'
 
@@ -20,19 +21,27 @@ export function MyWallet({ setOpenModalAddCrypto, handleOpenModalTransferCrypto,
 
   return (
     <div className="dashboard__mywallet">
-      <div className="dashboard_mywallet_container">
+      <div className="dashboard__mywallet_container">
         <div className="dashboard__mywallet_header">
           <div>
             <img src={wallet} alt="wallet icon" />
             <h2>My Wallet</h2>
           </div>
-          <Button text="+ Add crypto" onClick={() => setOpenModalAddCrypto(true)} />
+          <Button id="btn_add_crypto" text="+ Add crypto" onClick={() => setOpenModalAddCrypto(true)} />
+
+          {/* Show only mobile device */}
+          <button id="btn_add_crypto_mobile" onClick={() => setOpenModalAddCrypto(true)}>
+            +
+          </button>
         </div>
         {myCryptos.length ? (
-          <Table 
-            cryptos={myCryptos}
-            handleOpenModalTransferCrypto={handleOpenModalTransferCrypto}
-          />
+          <>
+            <Table 
+              cryptos={myCryptos}
+              handleOpenModalTransferCrypto={handleOpenModalTransferCrypto}
+            />
+            <CardsCrypto cryptos={myCryptos} handleOpenModalTransferCrypto={handleOpenModalTransferCrypto} />
+          </>
         ) : <EmptyWallet/>}
       </div>
     </div>

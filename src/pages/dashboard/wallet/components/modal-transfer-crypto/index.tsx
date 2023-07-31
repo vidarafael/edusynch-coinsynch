@@ -12,6 +12,7 @@ import { IMyCrypto } from '../..';
 
 
 import './styles.css'
+import { toast } from 'react-toastify';
 
 interface ModalTransferCryptoProps {
   isOpen: boolean;
@@ -74,13 +75,13 @@ export function ModalTransferCrypto({ isOpen, setIsOpen, crypto, setMyCryptos, s
     e.preventDefault()
 
     if (!selectedValue) {
-      return // TODO: Toast de error
+      return toast.error('No type of transfer selected');
     }
  
     const inputQuantity = Number(inputRef.current?.value)
 
     if (inputQuantity <= 0) {
-      return // TODO: Toast de error
+      return toast.error('Quantity value cannot be negative');
     }
 
     await api.post('/cryptos/transfer', {

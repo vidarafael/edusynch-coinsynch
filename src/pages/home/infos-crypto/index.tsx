@@ -1,11 +1,13 @@
+import { Dispatch, SetStateAction } from 'react';
+
+import { CardCrypto } from "./components/card-crypto";
+import { Button } from 'src/components/button'
+import { CarouselCard } from './components/carousel-card';
+
 import bitcoin from 'src/assets/bitcoin.svg'
 import circle from 'src/assets/circle.svg'
 import graphic from 'src/assets/graphic.svg'
-import { Dispatch, SetStateAction } from 'react';
-
 import desktop from 'src/assets/desktop.svg'
-import { CardCrypto } from "./components/card-crypto";
-import { Button } from 'src/components/button'
 
 import './styles.css'
 
@@ -26,6 +28,10 @@ export function InfosCrypto({ setOpenModalSignUp }: InfosCryptoProps) {
             <CardCrypto icon={graphic} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
             <CardCrypto icon={desktop} title="Crypto Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, " />
           </div>
+        </div>
+
+        <div className='home__infocrypto_container_carousel_cardcrypto'>
+          <CarouselCard />
         </div>
 
         <div className='home__infocrypto_container_information'>

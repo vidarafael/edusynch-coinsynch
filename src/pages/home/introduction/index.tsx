@@ -29,7 +29,7 @@ export function Introduction({ setOpenModalSignUp }: IntroductionProps) {
           </div>
         </section>
         
-        <section>
+        <section className='home__container_content_carousel_images'>
           <Carousel />
         </section>
       </main>

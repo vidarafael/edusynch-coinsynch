@@ -24,7 +24,7 @@ export function Dropdown({ userImg, userName }: DropdownProps) {
   return (
     <button className='dashboard__header_dropdown' onClick={() => setIsOpen((prevState) => !prevState)}>
       <img className="avatar" src={userImg} alt="avatar profile" />
-      <span>{userName}</span>
+      <p>{userName}</p>
       {isOpen ? <BiChevronUp/> : <BiChevronDown/>}
 
       {isOpen && (

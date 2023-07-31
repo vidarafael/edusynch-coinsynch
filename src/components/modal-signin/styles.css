@@ -45,10 +45,12 @@
 }
 
 #forgot_password {
+  display: block !important;
+  margin-left: auto;
   font-size: 1.2rem;
   display: inline-block;
   text-align: right;
-  margin-left: 24rem;
+  /* margin-left: 24rem; */
   color: var(--secondary-500, #8C8A97);
 }
 

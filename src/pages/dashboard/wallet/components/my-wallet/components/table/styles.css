@@ -8,12 +8,34 @@
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.6rem;
+  text-align: left;
+  padding-left: 4rem;
+}
+
+.dashboard_wallet_table_cryptos thead tr th:nth-child(1) {
   text-align: center;
+  padding-left: 0;
+  min-width: 4rem;
+}
+
+.dashboard_wallet_table_cryptos thead tr th:nth-child(5) {
+  padding-left: 0;
+  text-align: center;
+  width: 6rem;
 }
 
 .dashboard_wallet_table_cryptos tbody tr td {
-  padding: 1.4rem 0.4rem;
+  padding: 1.4rem 0.4rem 1.4rem 4rem;
   line-height: 2.4rem;
+}
+
+.dashboard_wallet_table_cryptos tbody tr td:nth-child(1) {
+  text-align: center;
+  padding-left: 0;
+}
+
+.dashboard_wallet_table_cryptos tbody tr td:nth-child(5) {
+  padding-left: 4px;
   text-align: center;
 }
 
@@ -26,40 +48,40 @@
   background: var(--secondary-100);
 }
 
-.table_cryptos_name_crypto {
+.dashboard__table_cryptos_name_crypto {
   display: flex;
   align-items: center;
 }
 
-.table_cryptos_name_crypto img {
-  margin-left: 12.4rem;
+.dashboard__table_cryptos_name_crypto img {
+  /* margin-left: 12.4rem; */
 }
 
-.table_cryptos_name_crypto span {
+.dashboard__table_cryptos_name_crypto span {
   display: inline-block;
   margin-left: 1.6rem;
   margin-right: 4px;
 }
 
-.table_cryptos_name_crypto p {
+.dashboard__table_cryptos_name_crypto p {
   color: var(--secondary-500)
 }
 
-
-.table_cryptos_holdings_crypto {
-  text-align: left !important;
-  padding-left: 12.2rem !important;
-}
-
-.table_cryptos_holdings_crypto p {
+.dashboard__table_cryptos_holdings_crypto p {
   font-size: 1.4rem;
   line-height: 1.6rem;
 }
 
-.table_cryptos_holdings_crypto span {
+.dashboard__table_cryptos_holdings_crypto span {
   display: inline-block;
   color: var(--primary-500);
 
   font-size: 1.2rem;
   line-height: 1.4rem;
+}
+
+@media (max-width: 767px) { 
+  .dashboard_wallet_table_cryptos {
+    display: none;
+  }
 }

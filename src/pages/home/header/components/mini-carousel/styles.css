@@ -13,9 +13,18 @@
   gap: 1rem;
 }
 
+/* Tablets and Desktops */
 @media (min-width: 768px) and (max-width: 1240px) {
   .home__header_carousel {
     margin: 0 auto;
     max-width: 55rem;
+  }
+}
+
+/* Mobile and Tablets */
+@media (max-width: 767px) { 
+  .home__header_carousel {
+    margin: 0 auto;
+    max-width: 100%;
   }
 }

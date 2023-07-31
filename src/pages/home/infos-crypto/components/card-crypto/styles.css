@@ -1,7 +1,6 @@
 .home__infocrypto_card {
   display: inline-block;
   background: #FFF;
-  /* width: 31.6rem; */
   width: 31.6rem;
   padding: 2.4rem;
   border-radius: 6px;
@@ -9,6 +8,8 @@
 }
 
 .home__infocrypto_card header img {
+  width: 6.4rem;
+  height: 6.4rem;
   margin-bottom: 0.8rem;
 }
 
@@ -30,5 +31,31 @@
 @media (min-width: 768px) and (max-width: 1240px) { 
   .home__infocrypto_card {
     width: 28rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  .home__infocrypto_card {
+    width: 20rem;
+  }
+
+  .home__infocrypto_card header img {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .home__infocrypto_card header p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  
+  .home__infocrypto_card header h2 {
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+  }
+  
+  .home__infocrypto_card main p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 }

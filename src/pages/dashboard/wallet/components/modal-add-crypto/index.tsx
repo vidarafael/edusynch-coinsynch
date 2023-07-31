@@ -1,5 +1,6 @@
 import { useState, MouseEvent, Dispatch, SetStateAction, useRef, useEffect, FormEvent } from 'react'
 import ReactDOM from "react-dom";
+import { toast } from 'react-toastify';
 import { IoMdClose } from 'react-icons/io';
 import { ICrypto, useCoinCrypto } from 'src/contexts/CoinCrypto';
 import { api } from 'src/services/axios';
@@ -66,12 +67,34 @@ export function ModalAddCrypto({ isOpen, setIsOpen, setMyCryptos, setTotalBalanc
 
     const calculate = string === 'INCREMENT' ? valueInputToNumber + 1 : valueInputToNumber - 1
 
+    if (calculate < 0) {
+      return toast.error('Quantity value cannot be negative', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+
     inputRef.current.value = String(calculate)
   }
 
-
   async function handleAddCrypto(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+
+    if (!Object.values(selectedValue).length) {
+      return toast.error('No crypto selected');
+    }
+
+    const valueInputToNumber = Number(inputRef.current?.value || 0)
+
+    if (valueInputToNumber < 0) {
+      return toast.error('Quantity value cannot be negative');
+    }
 
     const objectMyCryptos = {
       id: selectedValue.id,
@@ -104,6 +127,17 @@ export function ModalAddCrypto({ isOpen, setIsOpen, setMyCryptos, setTotalBalanc
     })
 
     setTotalBalance((prevState) => prevState + totalBalance)
+
+    toast.success('Crypto adding with sucess!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
     handleClearFormAndCloseModal()
   }

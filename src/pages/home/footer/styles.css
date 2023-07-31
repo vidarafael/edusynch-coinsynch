@@ -79,5 +79,29 @@
 
   .home__footer_subsciption_section .home__foter_container_email_subscription {
     width: 100%;
+    max-width: 32rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  .home__footer_subsciption_section p br {
+    display: none;
+  }
+
+  .home__footer_subsciption_section {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .home__footer_subsciption_section .home__foter_container_email_subscription {
+    width: 100%;
+  }
+
+  .home__footer_copyright_section {
+    justify-content: center;
+  }
+
+  .home__footer_copyright_section span {
+    display: none;
   }
 }

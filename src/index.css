@@ -154,3 +154,15 @@ a {
     padding-right: 4.8rem;
   }
 }
+
+/* Mobile and Tablets */
+@media (max-width: 767px) { 
+  .default__spacing {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .modal__content {
+    max-width: 28.4rem;
+  } 
+}

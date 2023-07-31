@@ -18,6 +18,7 @@
 
   top: 3rem;
   right: 2rem;
+  z-index: 100;
 }
 
 .avatar {
@@ -55,5 +56,10 @@
   border: none;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
   border-radius: 8px;
+}
 
+@media (max-width: 767px) { 
+  .dashboard__header_dropdown p {
+    display: none;
+  }
 }

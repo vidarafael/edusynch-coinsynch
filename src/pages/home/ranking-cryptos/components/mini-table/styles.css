@@ -1,0 +1,68 @@
+.home__container_mini_table .home__container_mini_table_title {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-500);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  padding: 0 3rem;
+}
+
+.home__container_mini_table main .home__main_container_cryptos {
+  padding: 1rem;
+}
+
+.home__container_mini_table main .home__main_container_cryptos:nth-child(even) {
+  background: var(--secondary-100);
+}
+
+.home__main_container_cryptos header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.home__main_container_cryptos_header_content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.home__main_container_cryptos header div img {
+  width: 2.4rem;
+}
+
+.home__main_container_cryptos header div span {
+  color: var(--text-base);
+}
+
+.home__main_container_cryptos header div p {
+  color: var(--secondary-500);
+}
+
+.home__main_container_cryptos_header_arrowicon {
+  color: var(--primary-500);
+  font-size: 1.6rem;
+}
+
+.home__main_container_cryptos main {
+  margin-top: 1rem;
+  border-top: 1px solid var(--secondary-200);
+}
+
+.home__main_container_cryptos main div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.home__main_container_cryptos main div p:first-child {
+  font-size: 1.2rem;
+  color: var(--text-base)
+}
+
+.home__main_container_cryptos main div p:last-child {
+  font-size: 1.4rem;
+}

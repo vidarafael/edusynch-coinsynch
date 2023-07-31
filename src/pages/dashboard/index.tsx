@@ -1,18 +1,21 @@
+import { useState } from "react";
+
 import { Header } from "./header";
 import { Sidebar } from "./sidebar";
 import { Wallet } from "./wallet";
-
-
-import './styles.css'
 import { Footer } from "./footer";
 
+import './styles.css'
+
 export function Dashboard() {
+  const [sidebarVisible, setSidebarVisible] = useState(false)
+
   return (
     <>
-      <Header />
+      <Header setSidebarVisible={setSidebarVisible} />
 
       <div className="dashboard__container">
-        <Sidebar />
+        <Sidebar sidebarVisible={sidebarVisible} setSidebarVisible={setSidebarVisible} />
         <Wallet />
       </div>
 
