@@ -10,9 +10,8 @@ import {
   Legend,
   ChartOptions,
 } from 'chart.js';
-import { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { ICrypto, useCoinCrypto } from 'src/contexts/CoinCrypto';
+import { ICrypto } from 'src/contexts/CoinCrypto';
 
 ChartJS.register(
   CategoryScale,
